@@ -1,0 +1,11 @@
+queue_slot: 70
+
+queue_world: "QUEUE"
+queue_x: 100
+queue_y: 65
+queue_z: 200
+
+world: "HUB"
+world_x: 0
+world_y: 70
+world_z: 0

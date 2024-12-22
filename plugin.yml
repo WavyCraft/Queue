@@ -1,0 +1,7 @@
+name: Queue
+version: 1.0.0
+authors: 
+ - WavyCraft
+ - Terpz710
+api: 5.0.0
+main: wavycraft\queue\Loader
