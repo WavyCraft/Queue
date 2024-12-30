@@ -32,7 +32,10 @@ final class QueueManager {
             $world = $worldManager->getWorldByName($queueWorldName);
         }
 
-        self::$queue[] = $player->getName();
+        if (!in_array($player->getName(), self::$queue, true)) {
+            self::$queue[] = $player->getName();
+        }
+
         $player->teleport(new Position((float)$queueX, (float)$queueY, (float)$queueZ, $world));
         $player->setNoClientPredictions(true);
     }
@@ -74,7 +77,8 @@ final class QueueManager {
     }
 
     public static function getQueuePosition(Player $player) : int{
-        return array_search($player->getName(), self::$queue) + 1;
+        $position = array_search($player->getName(), self::$queue, true);
+        return $position !== false ? $position + 1 : 0;
     }
 
     public static function removeFromQueue(Player $player) : void{
