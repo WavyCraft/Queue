@@ -19,7 +19,7 @@ class EventListener implements Listener {
         $queueSlot = $config->get("queue_slot");
         $player = $event->getPlayer();
 
-        if (count($server->getOnlinePlayers()) >= $queueSlot) {
+        if (count($server->getOnlinePlayers()) > $queueSlot) {
             QueueManager::addToQueue($player);
         }
     }
