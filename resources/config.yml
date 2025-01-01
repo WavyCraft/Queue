@@ -3,12 +3,12 @@ queue_slot: 70
 
 # World which the player will get teleported to until a slot opens up
 queue_world: "QUEUE"
-queue_x: 100
+queue_x: 20.0
 queue_y: 65
-queue_z: 200
+queue_z: 20.0
 
 # World which the player will get teleported once a slot opens up
 world: "HUB"
-world_x: 0
+world_x: 0.0
 world_y: 70
-world_z: 0
+world_z: 0.0
