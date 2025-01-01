@@ -17,10 +17,9 @@ class EventListener implements Listener {
         $config = Loader::getInstance()->getConfig();
 
         $queueSlot = $config->get("queue_slot");
-        $player = $event->getPlayer();
 
         if (count($server->getOnlinePlayers()) > $queueSlot) {
-            QueueManager::addToQueue($player);
+            QueueManager::addToQueue($event->getPlayer());
         }
     }
 
